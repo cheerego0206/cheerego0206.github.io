@@ -1,47 +1,80 @@
-html {
-  /* px means "pixels". The base font size is now 10 pixels high */
-  font-size: 16px;
-  /* Replace PLACEHOLDER with the font-family property value you got from Google Fonts */
-  font-family: "Roboto", sans-serif;     /*谷歌默认字体*/
-}
-h1 {                               
-  font-size: 60px;          /*字号*/
-  text-align: center;       /*居中*/
-}
-
-p,
-li {
-  font-size: 16px;
-  line-height: 2;         /*行高（）行间距*/
-  letter-spacing: 1px;       /*字间距？*/
-}
-p {
-  font-family: sans-serif;
-  color: red;
-}
-
-li {
-  background-color: greenyellow;
-  border: 1px solid black;
-  margin-bottom: 5px;
-}
+/* ================= 全局配色与排版 ================= */
 body {
-  width: 600px;
-  margin: 0 auto;
-  background-color: #ff9500;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
+    max-width: 700px; /* 稍微窄一点，更有阅读的聚拢感 */
+    margin: 0 auto;
+    padding: 40px 20px; /* 上下留出更多空白，呼吸感 */
+    
+    /* 核心：改用无衬线现代字体 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    line-height: 1.8; /* 行高再加大一点，显得更慵懒 */
+    color: #4A4A4A; /* 不用纯黑，用深灰，看着眼睛舒服 */
+    background-color: #F7F5F0; /* 燕麦白背景（类似小红书高级底色） */
 }
 
+/* ================= 导航栏 ================= */
+nav {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E5E0D8; /* 极细的浅卡其色分割线 */
+    margin-bottom: 40px;
+    text-align: center; /* 导航居中，更对称 */
+}
+
+nav a {
+    text-decoration: none;
+    color: #8A8A8A; /* 默认浅灰色 */
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px; /* 字间距拉开一点，显高级 */
+    margin: 0 10px;
+    transition: color 0.3s ease; /* 鼠标放上去颜色渐变动画 */
+}
+
+nav a:hover {
+    color: #2C3E50; /* 悬停时变成深灰蓝 */
+}
+
+/* ================= 标题样式 ================= */
 h1 {
-  margin: 0;
-  padding: 20px 0;
-  color: #00539f;
-  text-shadow: 3px 3px 1px black;
+    color: #2C3E50; /* 深灰蓝，比纯黑高级 */
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -0.5px; /* 标题字距稍微收紧一点 */
+    margin-bottom: 30px;
 }
 
+h2 {
+    color: #2C3E50;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 40px;
+    border-left: 4px solid #A3B19B; /* 左边加一条莫兰迪灰绿的小竖线 */
+    padding-left: 12px; /* 文字离竖线留点距离 */
+}
+
+/* ================= 文本与链接 ================= */
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #A3B19B; /* 正文里的链接用灰绿色 */
+    text-decoration: none;
+    border-bottom: 1px dashed #A3B19B; /* 用虚线代替下划线，更精致 */
+}
+
+a:hover {
+    color: #7D8F74; /* 悬停颜色变深 */
+}
+
+/* ================= 图片专属 ================= */
 img {
-  display: block;          /* 1. 让图片变成块级元素，这样它才有资格“居中” */
-  margin: 0 auto;        /* 2. 左右边距自动分配，让图片在页面里水平居中 */
-  max-width: 100%;     /* 3. 给图片上保险，不管多大的图，都别撑破 600px 的 body 容器 */
+    max-width: 50%; /* 宽度不超标 */
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 12px; /* 加大圆角，像 Ins 上的相框 */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); /* 极其柔和的散光阴影 */
 }
